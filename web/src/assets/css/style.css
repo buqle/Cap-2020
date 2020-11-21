@@ -1,0 +1,88 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+[w100]{width: 100%;}
+[w1200]{width: 1200px;margin: 0 auto;}
+[auto]{margin: 0 auto;}
+.head{background: #313131;height: 40px;}
+.head-bar p,.head p{justify-content: flex-end;}
+.head p{font-size: 14px;color: #fff;}
+.head p span{cursor:pointer;height: 100%;display: flex;align-items: center;padding: 0 16px;margin-left: 17px;}
+.head p span.hover{background: #edc74a;}
+[flex]{display: flex;}
+[flex-column]{flex-direction: column;}
+[w-1]{width: 100%}
+[h-1]{height: 100%;}
+[align-center]{align-items: center;}
+[text-center]{text-align: center;}
+.head-bar,.head p{width: 1178px;}
+.head-bar{padding: 16px 0;}
+.head-bar p{margin-left:100px;flex: 1 1 0; }
+.head-bar p span{    padding: 0px 23px;
+    margin-left: 8px;font-size: 14px;color: #3e3a3a;font-weight: 500;cursor: pointer;}
+.borders {background: url("../border.png") no-repeat  center #fff;height: 506px;}
+.h-img{background: url("../r.jpg") no-repeat right center #3e3e3e;height: 634px;}
+.pre-l{width: 480px;}
+.h-img pre{
+
+    line-height: 2;
+}
+pre{
+    width: 100%;
+    word-break: break-word;
+    white-space: pre-wrap;
+    color: #fff;
+    font-size: 14px;
+}
+
+.pre-l strong{color: #fff;}
+.pre-l .btt{margin-top: 40px;border-radius: 32px;height: 46px;line-height: 46px;width: 300px;}
+.power-warp{padding: 40px 0;}
+.power-warp p{color: #041465;font-size: 26px;padding-bottom: 40px;}
+
+.footer{background: #3e3e3e;padding: 30px 0;}
+.footer-top{padding:0 0 12px 12px;border-bottom: 1px solid #fff;}
+[c-fff]{color: #fff;}
+.footer p{font-size: 14px;justify-content: flex-end;padding: 16px 0;}
+.footer pre{padding-left: 10px;line-height: 2;}
+.button{background:#edc74a;text-align: center;color: #fff;cursor: pointer;}
+.button:hover{background: #edd23e;}
+a{text-decoration: none;color: #fff;}
+[c-p]{cursor: pointer;}
+
