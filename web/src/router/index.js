@@ -17,6 +17,10 @@ const routes = [
             {
                 path:'down',
                 component: _import_('DownView'),
+            },
+            {
+                path:'about',
+                component: _import_('About'),
             }
         ]
     },
