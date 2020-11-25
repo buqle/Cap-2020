@@ -102,7 +102,7 @@
   .about-warp dl{-moz-box-shadow:0px 5px 10px #acb3b5; -webkit-box-shadow:0px 5px 10px #acb3b5; box-shadow:0px 5px 10px #acb3b5;margin-bottom: 60px;}
   .about-warp dt{flex: 1 1 0;padding: 0 40px 34px 20px;align-self: flex-end;color: #383838;}
   .about-warp dt h4{font-size: 28px;}
-  .about-warp dt p,.about-warp_c h4{font-size: 30px;}
+  .about-warp dt p,.about-warp_c pre{font-size: 28px;}
   .about-warp dt p.tit{     padding: 44px 0 30px 0;font-weight: 600;font-size: 26px;}
   .about-warp dt h4{text-align: right;}
   .about-warp dt h4 span{border-bottom: 1px solid #383838;padding: 4px;}
@@ -110,8 +110,8 @@
   .about-warp dd{width: 384px;}
   .about-warp dl:nth-of-type(even){flex-direction: row-reverse;}
   .about-warp_c{}
-  .about-warp_c h4{padding: 26px 0px 16px 0;}
-  .about-warp_c pre{color: #383838;font-size: 24px;line-height: 48px;}
+  .about-warp_c h4{padding: 66px 0px 36px 0;font-size: 36px;}
+  .about-warp_c pre{color: #383838;font-size: 30px;line-height: 50px;}
   .about-warp_card{background: url("../assets/about5.jpg") no-repeat top center;width: 100%;height: 912px;margin: 60px auto 80px auto;}
   .about-warp_card dl{background: #fff;width: 730px;padding: 20px 0 20px 30px;color: #3e3e3e;margin-left: 10px;}
   .about-warp_card dl dt h4,.about-warp_c h4{color: #f9b705;}

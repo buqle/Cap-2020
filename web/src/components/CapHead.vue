@@ -12,11 +12,11 @@
                <img src="../assets/logo.png">
            </router-link>
           <p flex>
-              <span>FEATURED INSIGHTS</span>
-              <span>PRESS RELEASE</span>
-              <span>CAREERS</span>
+              <span>Featured Insights</span>
+              <span>Press Release</span>
+              <span>Careers</span>
               <a-dropdown placement="bottomCenter">
-              <span>ABOUT</span>
+              <span>About</span>
                   <div slot="overlay" c-383838 class="overlay">
                     <span c-p>Overview</span>
                     <span c-p>Contact</span>
