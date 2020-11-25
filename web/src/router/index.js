@@ -11,7 +11,7 @@ const routes = [
         redirect:'/about',
         children:[
             {
-                path:'about',
+                path:'/',
                 component: _import_('About'),
             }
         ]

@@ -1,6 +1,6 @@
 <template>
    <div>
-       <div class="head-bar" flex align-center auto c-p v-if="$route.path!='/about'">
+       <div class="head-bar" flex align-center auto c-p v-if="$route.path!='/'">
            <router-link target="_blank" :to="{path:'/'}">
                <img src="../assets/logo.png">
            </router-link>
