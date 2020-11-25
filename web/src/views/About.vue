@@ -26,7 +26,7 @@
     <img src="../assets/about4.jpg" w-1/>
 
     <div class="about-warp_c" w-1136>
-      <h4 center fz-28>What We Do</h4>
+      <h4 center fz-28 center>What We Do</h4>
       <pre>ACQUACAP is a leading global investment business investing capital on behalf of large institutions and pension funds. We strive to create great value for our investors by carefully managing their capital. The classes in which we invest include private equity, hedge funds, real estate and other alternative assets. Our efforts have won the recognition of investors and, more importantly, have supported the development of hundreds of enterprises.</pre>
     </div>
 
@@ -109,7 +109,7 @@
   .about-warp dd{width: 384px;}
   .about-warp dl:nth-of-type(even){flex-direction: row-reverse;}
   .about-warp_c{}
-  .about-warp_c h4{padding: 26px 230px 16px 0;text-align: right;}
+  .about-warp_c h4{padding: 26px 0px 16px 0;}
   .about-warp_c pre{color: #383838;font-size: 24px;line-height: 48px;}
   .about-warp_card{background: url("../assets/about5.jpg") no-repeat top center;width: 100%;height: 912px;margin: 60px auto 80px auto;}
   .about-warp_card dl{background: #fff;width: 730px;padding: 20px 0 20px 30px;color: #3e3e3e;margin-left: 10px;}
