@@ -8,16 +8,8 @@ const routes = [
         path: '/',
         name: 'Home',
         component: _import_('LayOut'),
-        redirect:'/home',
+        redirect:'/about',
         children:[
-            {
-                path:'home',
-                component: _import_('Home'),
-            },
-            {
-                path:'down',
-                component: _import_('DownView'),
-            },
             {
                 path:'about',
                 component: _import_('About'),

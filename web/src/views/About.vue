@@ -7,10 +7,10 @@
         v-for="(item,index) in arr" :key="index"
       >
         <dt>
-          <p class="tit">
+          <p class="tit" fz-26>
             {{item.tit}}
           </p>
-          <p style="line-height: 46px;">{{item.cont}}</p>
+          <p style="line-height: 44px;">{{item.cont}}</p>
           <h4>
             <span c-p>Read More</span>
           </h4>
@@ -26,7 +26,7 @@
     <img src="../assets/about4.jpg" w-1/>
 
     <div class="about-warp_c" w-1136>
-      <h4 center fz-28 center>What We Do</h4>
+      <h4 center fz-28 center bold>What We Do</h4>
       <pre>ACQUACAP is a leading global investment business investing capital on behalf of large institutions and pension funds. We strive to create great value for our investors by carefully managing their capital. The classes in which we invest include private equity, hedge funds, real estate and other alternative assets. Our efforts have won the recognition of investors and, more importantly, have supported the development of hundreds of enterprises.</pre>
     </div>
 
@@ -61,7 +61,7 @@
           <p center c-fff fz-28 bold c-p>Subscribe</p>
         </dd>
     </div>-->
-    <div style="background: #3e3e3e;height: 40px;"></div>
+    <div style="background: #3e3e3e;height: 30px;"></div>
 
   </div>
 </template>
@@ -74,17 +74,17 @@
       return{
         arr:[
           {
-            tit:'HOW TO DEAL WITH PRESIDENTIAL TRANSITION?',
+            tit:'How to Deal with Presidential Transition?',
             cont:'As the new administration prepares to take office, what should investors be prepared for the coming uncertain time?',
             img:about1
           },
           {
-            tit:'ARE TECH STOCKS BEING DUMPED?',
+            tit:'Are Tech Stocks Being Dumped?',
             cont:'Some technology stocks that have risen on the back of the epidemic took a hit after Pfizer announced the vaccine was more than 90 per cent effective.',
             img:about2
           },
           {
-            tit:'ENERGY MARKET UNDER THE PROCESS OF DE-CARBONIZATION',
+            tit:'Energy Market Under the Process of De-Carbonization',
             cont:'Despite the coVID-19 outbreak in 2020, shareholder participation on climate change issues reached a new high, especially in Europe.',
             img:about3
           }
@@ -100,9 +100,10 @@
   }
   .about-warp{padding-top: 150px;}
   .about-warp dl{-moz-box-shadow:0px 5px 10px #acb3b5; -webkit-box-shadow:0px 5px 10px #acb3b5; box-shadow:0px 5px 10px #acb3b5;margin-bottom: 60px;}
-  .about-warp dt{flex: 1 1 0;padding: 0 40px 20px 20px;align-self: flex-end;color: #383838;}
-  .about-warp dt p.tit{font-size: 22px;    padding-bottom: 20px;}
-  .about-warp dt p,.about-warp dt h4{font-size: 28px;}
+  .about-warp dt{flex: 1 1 0;padding: 0 40px 34px 20px;align-self: flex-end;color: #383838;}
+  .about-warp dt h4{font-size: 28px;}
+  .about-warp dt p,.about-warp_c h4{font-size: 30px;}
+  .about-warp dt p.tit{     padding: 44px 0 30px 0;font-weight: 600;font-size: 26px;}
   .about-warp dt h4{text-align: right;}
   .about-warp dt h4 span{border-bottom: 1px solid #383838;padding: 4px;}
   .about-warp dt h4 span:hover,.about-warp_card dl dd h5:hover{color: #ffb900;border-bottom: 1px solid #ffb900;}

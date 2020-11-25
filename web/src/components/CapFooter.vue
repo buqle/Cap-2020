@@ -16,14 +16,13 @@
             <dl flex w1200 align-center>
                 <dt flex align-center>
                     © 2020 ACQUACAP
-                    <i></i>
                 </dt>
-                <dd>
+               <!-- <dd>
                     <span>Contact</span>
                     <span>Privacy Policy</span>
                     <span>Cookie Policy</span>
                     <span>Legal Notice</span>
-                </dd>
+                </dd>-->
             </dl>
         </div>
     </div>
@@ -37,7 +36,7 @@
 </script>
 
 <style scoped>
-.footer-new{font-size: 24px;background: #fff;padding: 60px 0 90px 0;font-weight: 500;color: #383838;}
-    .footer-new dt i{height: 22px;width: 1px;background: #383838;margin: 0 18px;}
+.footer-new{font-size: 24px;background: #fff;padding: 40px 0 50px 0;font-weight: 500;color: #383838;}
+
     .footer-new dd span{padding-right: 34px;}
 </style>
