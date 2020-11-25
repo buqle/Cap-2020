@@ -12,7 +12,7 @@
           </p>
           <p style="line-height: 46px;">{{item.cont}}</p>
           <h4>
-            <span>Read More</span>
+            <span c-p>Read More</span>
           </h4>
         </dt>
         <dd>
@@ -41,11 +41,11 @@
            <p style="padding-top: 0">truly be your personal best with our best team.</p>
          </dt>
          <dd>
-           <h5 fz-26>
+           <h5 fz-26 c-p>
              Apply
            </h5>
            <br>
-           <h5 fz-28>
+           <h5 fz-28 c-p>
              Discover ACQUACAP
            </h5>
          </dd>
@@ -53,16 +53,15 @@
      </div>
     </div>
 
-    <div class="about-warp_bottom" w-1>
+   <!-- <div class="about-warp_bottom" w-1>
       <dl flex align-center>
         <dt fz-28 c-fff bold>Stay up to date with our latest insights</dt>
         <dd flex>
           <input type="text"  placeholder="E-mail Address">
           <p center c-fff fz-28 bold c-p>Subscribe</p>
         </dd>
-      </dl>
-    </div>
-
+    </div>-->
+    <div style="background: #3e3e3e;height: 40px;"></div>
 
   </div>
 </template>
@@ -75,17 +74,17 @@
       return{
         arr:[
           {
-            tit:'How to Deal with Presidential TransitioN?',
+            tit:'HOW TO DEAL WITH PRESIDENTIAL TRANSITION?',
             cont:'As the new administration prepares to take office, what should investors be prepared for the coming uncertain time?',
             img:about1
           },
           {
-            tit:'Are Tech Stocks Being Dumped?',
+            tit:'ARE TECH STOCKS BEING DUMPED?',
             cont:'Some technology stocks that have risen on the back of the epidemic took a hit after Pfizer announced the vaccine was more than 90 per cent effective.',
             img:about2
           },
           {
-            tit:'Energy Market Under the Process of De-Carbonization',
+            tit:'ENERGY MARKET UNDER THE PROCESS OF DE-CARBONIZATION',
             cont:'Despite the coVID-19 outbreak in 2020, shareholder participation on climate change issues reached a new high, especially in Europe.',
             img:about3
           }
@@ -96,6 +95,9 @@
 </script>
 <style scoped>
 
+  body{
+    font-family: HELVETI1-1
+  }
   .about-warp{padding-top: 150px;}
   .about-warp dl{-moz-box-shadow:0px 5px 10px #acb3b5; -webkit-box-shadow:0px 5px 10px #acb3b5; box-shadow:0px 5px 10px #acb3b5;margin-bottom: 60px;}
   .about-warp dt{flex: 1 1 0;padding: 0 40px 20px 20px;align-self: flex-end;color: #383838;}
@@ -103,12 +105,13 @@
   .about-warp dt p,.about-warp dt h4{font-size: 28px;}
   .about-warp dt h4{text-align: right;}
   .about-warp dt h4 span{border-bottom: 1px solid #383838;padding: 4px;}
+  .about-warp dt h4 span:hover,.about-warp_card dl dd h5:hover{color: #ffb900;border-bottom: 1px solid #ffb900;}
   .about-warp dd{width: 384px;}
   .about-warp dl:nth-of-type(even){flex-direction: row-reverse;}
   .about-warp_c{}
-  .about-warp_c h4{padding: 26px 0 16px 0;}
-  .about-warp_c pre{color: #383838;font-size: 24px;line-height: 38px;}
-  .about-warp_card{background: url("../assets/about5.jpg") no-repeat top center;width: 100%;height: 912px;margin: 60px auto 50px auto;}
+  .about-warp_c h4{padding: 26px 230px 16px 0;text-align: right;}
+  .about-warp_c pre{color: #383838;font-size: 24px;line-height: 48px;}
+  .about-warp_card{background: url("../assets/about5.jpg") no-repeat top center;width: 100%;height: 912px;margin: 60px auto 80px auto;}
   .about-warp_card dl{background: #fff;width: 730px;padding: 20px 0 20px 30px;color: #3e3e3e;margin-left: 10px;}
   .about-warp_card dl dt h4,.about-warp_c h4{color: #f9b705;}
   .about-warp_card dl dt p{padding: 24px 0;}
