@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <img src="../assets/about.jpg" w-1/>
-
     <div class="about-warp" w-1136>
       <dl flex
         v-for="(item,index) in arr" :key="index"
