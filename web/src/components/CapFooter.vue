@@ -1,18 +1,8 @@
 <template>
     <div>
-        <div class="footer"  v-if="$route.path!='/about'">
-            <div w1200  c-fff>
-                <div class="footer-top">
-                    <img src="../assets/bottom.png" width="140" height="30">
-                </div>
-                <p flex>Contact us: ACQUACAP</p>
-                <pre><b>Risk Warning:</b>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Leveraged products may not be suitable for everyone. You should consider whether you understand how the products work, and whether you can afford to take the high risk of losing your capital.</pre>
-                <div style="height: 20px;"></div>
-                <pre><b>Restricted Regions:</b>ACQUACAP does not provide services for the residents of certain countries, such as the United States of America and the Islamic Republic of Iran. </pre>
-            </div>
-        </div>
 
-        <div v-else  class="footer-new">
+      <div style="background: #3e3e3e;height: 30px;"></div>
+        <div  class="footer-new">
             <dl flex w1200 align-center>
                 <dt flex align-center>
                     © 2020 ACQUACAP

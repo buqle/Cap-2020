@@ -1,23 +1,42 @@
 <template>
   <div class="about">
-    <img src="../assets/about.jpg" w-1/>
+    <a-carousel>
+      <img  :src="item" w-1 v-for="(item,index) in banner" :key="index"/>
+    </a-carousel>
     <div class="about-warp" w-1136>
       <dl flex
-        v-for="(item,index) in arr" :key="index"
+          v-for="[label, value] in newsList" :key="label"
       >
         <dt flex>
           <p class="tit" fz-26>
-            {{item.tit}}
+            <template v-if="value.title&&value.title.length>=50">
+              <a-tooltip placement="top">
+                <template slot="title">
+                  {{value.title}}
+                </template>
+                <div>{{value.title|readMore(50,'...')}}</div>
+              </a-tooltip>
+
+            </template>
+            <template v-else>
+              {{value.title}}
+            </template>
           </p>
-          <p style="line-height: 44px;">{{item.cont}}</p>
+          <template v-if="value.brief&&value.brief.length>=150">
+            <p v-html="value.brief|readMore(150,'...')" style="line-height: 44px;">
+            </p>
+          </template>
+          <template v-else>
+            <p v-html="value.brief" style="line-height: 44px;"></p>
+          </template>
           <h4 fz-26 flex>
-            <span c-p align-center>Read More</span>
+            <span c-p align-center @click="$router.push({path:'/featured-list'})">Read More</span>
           </h4>
         </dt>
         <dd>
           <!--<img src="../assets/about1.jpg" width="100%" height="100%"/>-->
           <!--<img src="`../assets/about${index+1}.jpg`" width="100%" height="100%"/>-->
-          <img :src="item.img" width="100%" height="100%"/>
+          <img :src="value.img" width="100%" height="100%"/>
         </dd>
       </dl>
     </div>
@@ -40,11 +59,11 @@
            <p style="padding-top: 0">truly be your personal best with our best team.</p>
          </dt>
          <dd>
-           <h5 fz-26 c-p>
+           <h5 fz-26 c-p @click="$router.push({path:'careers'})">
              Apply
            </h5>
            <br>
-           <h5 fz-28 c-p>
+           <h5 fz-28 c-p @click="$router.push({name: 'about', params: {tit: 'overview' }})">
              Discover ACQUACAP
            </h5>
          </dd>
@@ -60,37 +79,65 @@
           <p center c-fff fz-28 bold c-p>Subscribe</p>
         </dd>
     </div>-->
-    <div style="background: #3e3e3e;height: 30px;"></div>
+
 
   </div>
 </template>
 <script>
-  import about1 from '../assets/about1.jpg'
-  import about2 from '../assets/about2.jpg'
-  import about3 from '../assets/about3.jpg'
-  export default{
-    data() {
-      return{
-        arr:[
-          {
-            tit:'How to Deal with Presidential Transition?',
-            cont:'As the new administration prepares to take office, what should investors be prepared for the coming uncertain time?',
-            img:about1
-          },
-          {
-            tit:'Are Tech Stocks Being Dumped?',
-            cont:'Some technology stocks that have risen on the back of the epidemic took a hit after Pfizer announced the vaccine was more than 90 per cent effective.',
-            img:about2
-          },
-          {
-            tit:'Energy Market Under the Process of De-Carbonization',
-            cont:'Despite the coVID-19 outbreak in 2020, shareholder participation on climate change issues reached a new high, especially in Europe.',
-            img:about3
-          }
-        ]
-      }
+import about1 from "@/assets/about1.jpg";
+import about2 from "@/assets/about2.jpg";
+import about3 from "@/assets/about3.jpg";
+
+export default {
+  name: "FeaturedIns",
+  data() {
+    return{
+      arr:[
+        {
+          tit:'How to Deal with Presidential Transition?',
+          cont:'As the new administration prepares to take office, what should investors be prepared for the coming uncertain time?',
+          img:about1
+        },
+        {
+          tit:'Are Tech Stocks Being Dumped?',
+          cont:'Some technology stocks that have risen on the back of the epidemic took a hit after Pfizer announced the vaccine was more than 90 per cent effective.',
+          img:about2
+        },
+        {
+          tit:'Energy Market Under the Process of De-Carbonization',
+          cont:'Despite the coVID-19 outbreak in 2020, shareholder participation on climate change issues reached a new high, especially in Europe.',
+          img:about3
+        }
+      ],
+      newsList:[],
+      mapkey:[10,20,30],
+      banner:[],
+      show:true
     }
-  }
+  },
+  async created(){
+    const data=await this.$api.list.getBanner()
+    if(data.code==0){
+      this.banner=data.data
+      this.show=false
+    }
+    const news=await this.$api.list.getNews()
+    if(news.code==0){
+      const result = new Map()
+      let i=0;
+      for(const key in news.data){
+        result.set(this.mapkey[i],news.data[key])
+        i++
+      }
+      this.newsList=result
+    }
+  },
+  methods: {
+    onChange(a, b, c) {
+      console.log(a, b, c);
+    },
+  },
+}
 </script>
 <style scoped>
 

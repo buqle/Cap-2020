@@ -14,7 +14,15 @@
         components:{
             CapHead,
             CapFooter
-        }
+        },
+      created(){
+        window.scrollTo(0,0);
+      },
+      watch:{
+          $route(){
+            window.scrollTo(0,0);
+          }
+      }
     }
 </script>
 

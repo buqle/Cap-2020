@@ -57,7 +57,7 @@ button {
 .head-bar p span{
    font-size: 22px;margin-right: 50px;}
 .overlay span,.head-bar p span{border-bottom:6px solid transparent;}
-.head-bar p span:hover,.overlay span:hover{color: #ffb900;border-bottom: 6px solid #ffb900;}
+.head-bar p span:hover,.overlay span:hover,.head-bar p span.active{color: #ffb900;border-bottom: 6px solid #ffb900;}
 
 .footer-new span,.head-bar p span{color: #383838;cursor: pointer;}
 
@@ -103,4 +103,10 @@ pre{
 [fz-28]{font-size: 28px;}
 [fz-30]{font-size: 30px;}
 [fz-26]{font-size: 26px;}
+[fz-24]{font-size: 24px;}
+[fz-50]{font-size: 50px;}
 [bold]{font-weight: bold;}
+i{font-style: normal;}
+[h-p]{font-family: HelveticaLig;}
+[h-b]{font-family: HelveticaBold;}
+[c-f9b705]{color: #f9b705;}
