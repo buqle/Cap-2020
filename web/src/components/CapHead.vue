@@ -55,7 +55,7 @@
               },
               {
                 title:'About',
-                path: '/',
+                path: '/overview',
                 child:[
                   {
                     title:'Overview',

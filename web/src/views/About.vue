@@ -30,7 +30,7 @@
             <p v-html="value.brief" style="line-height: 44px;"></p>
           </template>
           <h4 fz-26 flex>
-            <span c-p align-center @click="$router.push({path:'/featured-list'})">Read More</span>
+            <span c-p align-center @click="goList(value.title)">Read More</span>
           </h4>
         </dt>
         <dd>
@@ -120,6 +120,8 @@ export default {
     if(data.code==0){
       this.banner=data.data
       this.show=false
+    }else {
+      this.$message.warning('加载失败');
     }
     const news=await this.$api.list.getNews()
     if(news.code==0){
@@ -130,12 +132,28 @@ export default {
         i++
       }
       this.newsList=result
+    }else {
+      this.$message.warning('加载失败');
     }
   },
   methods: {
     onChange(a, b, c) {
       console.log(a, b, c);
     },
+    goList(tit){
+      tit = tit
+              .replace(/\=/g, "%3D")
+              .replace(/\+/g, "=")
+              .replace(/[\s]/g, "-")
+              .replace(/\?/g, "")
+              .replace(/\#/g, "?")
+              .replace(/\&/g, "&");
+      this. $router.push({name:'featuredList',params:{
+
+          tit
+
+        }})
+    }
   },
 }
 </script>
