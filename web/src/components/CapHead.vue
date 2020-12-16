@@ -12,7 +12,7 @@
                 tag="span"
                 v-for="(item,index) in nav"
                 :key="index"
-                :to="index!=3?item.path:{ name: 'about', params: { tit: 'overview' }}"
+                :to="index!=3?item.path:{ name: 'about'}"
                 :class="{active:$route.path==item.path}"
                 cursor-p
             >
@@ -20,7 +20,7 @@
                 <a-dropdown placement="bottomCenter">
                   <i>About</i>
                   <div slot="overlay" c-383838 class="overlay">
-                    <span c-p v-for="(ii,inde) in item.child" :key="inde" c-p @click="goView(item.path,ii.tit)">{{ii.title}}</span>
+                    <span c-p v-for="(ii,inde) in item.child" :key="inde" c-p @click="goView( item.path)">{{ii.title}}</span>
                   </div>
                 </a-dropdown>
               </template>
@@ -55,14 +55,13 @@
               },
               {
                 title:'About',
-                path: '/overview',
                 child:[
                   {
                     title:'Overview',
-                    tit: 'overview'
+                    path: '/overview'
                   },{
                     title:'Contact',
-                    tit:'contact'
+                    path:'/contact'
                   }
                 ]
               },
@@ -70,9 +69,10 @@
           }
       },
       methods:{
-          goView(path,query){
+          goView(path){
             //this.nav[3].path==r
-            this.$router.push({name:'about',params:{tit:query}})
+            console.log(path)
+            this.$router.push({path})
           }
       }
     }
