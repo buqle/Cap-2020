@@ -1,7 +1,10 @@
 <template>
   <div class="about">
     <a-carousel>
-      <img  :src="item" w-1 v-for="(item,index) in banner" :key="index"/>
+      <div class="img-head" w-1 v-for="(item,index) in banner" :key="index">
+        <h4>{{$t('banner')}}</h4>
+        <img  :src="item"  w-1/>
+      </div>
     </a-carousel>
     <div class="about-warp" w-1136>
       <dl flex
@@ -9,28 +12,12 @@
       >
         <dt flex>
           <p class="tit" fz-26>
-            <template v-if="value.title&&value.title.length>=50">
-              <a-tooltip placement="top">
-                <template slot="title">
-                  {{value.title}}
-                </template>
-                <div>{{value.title|readMore(50,'...')}}</div>
-              </a-tooltip>
-
-            </template>
-            <template v-else>
-              {{value.title}}
-            </template>
+            {{value.title}}
           </p>
-          <template v-if="value.brief&&value.brief.length>=150">
-            <p v-html="value.brief|readMore(150,'...')" style="line-height: 44px;">
-            </p>
-          </template>
-          <template v-else>
-            <p v-html="value.brief" style="line-height: 44px;"></p>
-          </template>
+          <p v-html="value.brief" style="line-height: 44px;">
+        </p>
           <h4 fz-26 flex>
-            <span c-p align-center @click="goList(value.title)">Read More</span>
+            <span c-p align-center @click="goList(value.title,value.content,label)">{{$t('content.btn')}}</span>
           </h4>
         </dt>
         <dd>
@@ -44,8 +31,8 @@
     <img src="../assets/about4.jpg" w-1/>
 
     <div class="about-warp_c" w-1136>
-      <h4 center fz-28 center bold>What We Do</h4>
-      <pre>ACQUACAP is a leading global investment business investing capital on behalf of large institutions and pension funds. We strive to create great value for our investors by carefully managing their capital. The classes in which we invest include private equity, hedge funds, real estate and other alternative assets. Our efforts have won the recognition of investors and, more importantly, have supported the development of hundreds of enterprises.</pre>
+      <h4 center fz-28 center bold>{{$t('content.title')}}</h4>
+      <pre>{{$t('content.cont')}}</pre>
     </div>
 
     <div class="about-warp_card" flex>
@@ -53,18 +40,18 @@
        <dl>
          <dt fz-26>
            <h4 fz-30>
-             Join ACQUACAP
+             {{$t('career.tit1')}}
            </h4>
-           <p>Come to ACQUACAP,</p>
-           <p style="padding-top: 0">truly be your personal best with our best team.</p>
+           <p>{{$t('career.tit2')}}</p>
+           <p style="padding-top: 0">{{$t('career.tit3')}}</p>
          </dt>
          <dd>
            <h5 fz-26 c-p @click="$router.push({path:'careers'})">
-             Apply
+             {{$t('career.btn1')}}
            </h5>
            <br>
            <h5 fz-28 c-p @click="$router.push({name: 'about', params: {tit: 'overview' }})">
-             Discover ACQUACAP
+             {{$t('career.btn2')}}
            </h5>
          </dd>
        </dl>
@@ -87,35 +74,20 @@
 import about1 from "@/assets/about1.jpg";
 import about2 from "@/assets/about2.jpg";
 import about3 from "@/assets/about3.jpg";
-
+import {mapActions} from 'vuex'
 export default {
-  name: "FeaturedIns",
+  name: "abou",
   data() {
     return{
-      arr:[
-        {
-          tit:'How to Deal with Presidential Transition?',
-          cont:'As the new administration prepares to take office, what should investors be prepared for the coming uncertain time?',
-          img:about1
-        },
-        {
-          tit:'Are Tech Stocks Being Dumped?',
-          cont:'Some technology stocks that have risen on the back of the epidemic took a hit after Pfizer announced the vaccine was more than 90 per cent effective.',
-          img:about2
-        },
-        {
-          tit:'Energy Market Under the Process of De-Carbonization',
-          cont:'Despite the coVID-19 outbreak in 2020, shareholder participation on climate change issues reached a new high, especially in Europe.',
-          img:about3
-        }
-      ],
-      newsList:[],
+      newsList:{},
       mapkey:[10,20,30],
       banner:[],
       show:true
     }
   },
   async created(){
+    console.log(this.$i18n.locale)
+    this.getList()
     const data=await this.$api.list.getBanner()
     if(data.code==0){
       this.banner=data.data
@@ -123,24 +95,15 @@ export default {
     }else {
       this.$message.warning('加载失败');
     }
-    const news=await this.$api.list.getNews()
-    if(news.code==0){
-      const result = new Map()
-      let i=0;
-      for(const key in news.data){
-        result.set(this.mapkey[i],news.data[key])
-        i++
-      }
-      this.newsList=result
-    }else {
-      this.$message.warning('加载失败');
-    }
+
   },
   methods: {
+    ...mapActions(['setContent']),
     onChange(a, b, c) {
       console.log(a, b, c);
     },
-    goList(tit){
+
+    goList(tit,content,index){
       tit = tit
               .replace(/\=/g, "%3D")
               .replace(/\+/g, "=")
@@ -153,8 +116,32 @@ export default {
           tit
 
         }})
+      this.setContent({
+        index,
+        language:this.$i18n.locale
+      })
+    },
+    async getList(){
+      const news=await this.$api.list.getNews(this.$i18n.locale)
+      if(news.code==0){
+        const result = new Map()
+        let i=0;
+        for(const key in news.data){
+          result.set(this.mapkey[i],news.data[key])
+          i++
+        }
+        this.newsList=result
+        console.log(this.newsList)
+      }else {
+        this.$message.warning('加载失败');
+      }
     }
   },
+  watch:{
+    '$i18n.locale'(val){
+      this.getList()
+    }
+  }
 }
 </script>
 <style scoped>
@@ -169,7 +156,7 @@ export default {
   .about-warp dt p,.about-warp_c pre{font-size: 24px;}
   .about-warp dt p.tit{     padding: 44px 0 30px 0;font-weight: 600;font-size: 26px;}
   .about-warp dt h4{flex:1;    align-self: flex-end;align-items: flex-end;padding-bottom: 34px;}
-  .about-warp dt h4 span{border-bottom: 1px solid #383838;padding: 4px 0;width: 136px;text-align: center;height: 40px;}
+  .about-warp dt h4 span{border-bottom: 1px solid #383838;padding: 4px 0;text-align: center;height: 40px;}
   .about-warp dt h4 span:hover,.about-warp_card dl dd h5:hover{color: #ffb900;border-bottom: 1px solid #ffb900;}
   .about-warp dd{width: 384px;}
   .about-warp dl:nth-of-type(even){flex-direction: row-reverse;}
@@ -202,4 +189,5 @@ export default {
     /* Internet Explorer 10+ */
     color: #ccc;
   }
+  .img-head h4{align-items: start;margin-top: 130px;}
 </style>

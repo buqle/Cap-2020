@@ -6,6 +6,24 @@ import 'ant-design-vue/dist/antd.css';
 import axios from 'axios'
 import Antd from 'ant-design-vue';
 Vue.use(Antd)
+import VueI18n from 'vue-i18n'
+
+Vue.use(VueI18n)
+
+const i18n = new VueI18n({
+
+  locale: 'en', // 定义默认语言为中文 
+
+  messages: {
+    'zh': require('@/assets/languages/zh.json'),
+    'en': require('@/assets/languages/en.json'),
+    'my': require('@/assets/languages/other.json')
+
+  }
+
+});
+
+
 
 
 //过滤器
@@ -25,5 +43,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

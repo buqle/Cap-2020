@@ -1,0 +1,106 @@
+{
+  "className": "other",
+  "nav":[
+    {
+      "title":"Dapatan Pilihan",
+      "path":"/featured-insights"
+    },
+    {
+      "title":"Siaran Akhbar",
+      "path":"/press-release"
+    },
+    {
+      "title": "Kerjaya",
+      "path":"/careers"
+    },
+    {
+      "title":"Tentang Kami",
+      "child":[
+        {
+          "title":"-Gambaran Keseluruhan",
+          "path": "/overview"
+        },{
+          "title":"-Hubungi Kami",
+          "path":"/contact"
+        }
+      ]
+    }
+  ],
+  "content": {
+    "title": "Apa Yang Kami Lakukan",
+    "cont": "ACQUACAP adalah perniagaan pelaburan global terkemuka yang melaburkan modal bagi pihak institusi terbesar dan dana pencen. Kami berusaha untuk mencipta nilai yang besar bagi pelabur kami dengan mengurus modal mereka dengan teliti. Kelas di mana kami melabur termasuk ekuiti persendirian, hedge funds, harta tanah dan aset alternatif lain. Usaha kami telah mendapat pengiktirafan para pelabur dan yang lebih penting lagi, telah menyokong pengembangan ratusan syarikat.",
+    "btn": "Baca Lebih Lanjut"
+  },
+  "career": {
+    "tit1": "Sertailah ACQUACAP",
+    "tit2": "Datang ke ACQUACAP,",
+    "tit3": "adi diri anda yang terbaik dengan pasukan terbaik kami.",
+    "btn1": "Mohon",
+    "btn2": "Terokai ACQUACAP"
+  },
+  "arr":[
+    {
+      "tit":"Ubah Masa Depan Anak-Anak Kita",
+      "cont":"Kami bekerjasama dengan agensi kebajikan kanak-kanak untuk merancang penyelesaian inovatif menggunakan kepakaran kami dalam menganalisa data dan pemasaran. Pada masa yang sama, kami meminta para inovator dari bidang lain untuk bekerjasama dengan kami untuk cara mengurangkan bilangan anak-anak yang kehilangan tempat tinggal dengan selamat."
+    },
+    {
+      "tit":"Perniagaan Tidak Akan Sama Seperti Sebelumnya",
+      "cont":"Walaupun ketidakpastian dari krisis COVID-19 terus beredar di seluruh dunia, satu perkara yang menjadi jelas: perniagaan telah berubah selama-lamanya. Adakah sudah terlambat untuk berubah? Baru-baru ini ACQUACAP telah membincangkan dengan media kesan jangka panjang COVID-19 terhadap operasi syarikat."
+    }
+  ],
+  "press": "Siaran Akhbar",
+  "join": {
+    "bantit": "Kerjaya",
+    "tit1": "Setiap hari, kami bersedia untuk menerima cabaran baru, berdedikasi untuk terus maju dan tidak pernah berhenti. Kami mempunyai golongan elit kewangan dengan pengalaman berpuluh-puluh tahun dan generasi baru yang dinamik. Kami percaya bahawa kerja berpasukan adalah kata kunci kejayaan kami dan fokus kami pada profesionalisme menjadikan kami lebih baik dari sebelum ini.",
+    "tit2": "Sertai Kami",
+    "tit3": "Di ACQUACAP, penubuhan kami didorong oleh orang-orang berbakat yang luar biasa. Kami memberi tumpuan untuk menarik bakat berkaliber tinggi dan menyokong pemikiran dan integriti yang bebas.",
+    "tit4": "Kami komited untuk menawarkan peluang pembelajaran dan pengembangan untuk membantu memajukan kerjaya pekerja kami di beberapa bidang. Dan tentu saja, kami juga menawarkan faedah komprehensif dan kompetitif kepada pekerja kami.",
+    "tit5": " Hantarkan emel dengan CV anda dan kedudukan yang ingin anda sertai. ACQUACAP menantikan penyertaan anda."
+  },
+  "overview": {
+    "tit1": "ACQUACAP adalah salah satu perniagaan pelaburan global terkemuka di dunia. Kami melayani pelabur institusi di seluruh dunia. Kami berusaha untuk mencipta nilai yang besar untuk pelabur kami melalui pelbagai penyelesaian kami. Usaha kami telah menyokong pengembangan ratusan perusahaan dan ekonomi tempatan.",
+    "tit2": "Apa Yang Kami Lakukan",
+    "tit3": "Kami melaburkan pelbagai kelas aset alternatif bagi pihak institusi terbesar dan dana pencen. Misi kami adalah untuk mencipta nilai yang besar bagi pelabur kami dengan mengurus modal mereka dengan teliti.",
+    "tit4": "Prinsip",
+    "tit5": "Kecemerlangan · Integriti · Ketajaman · Inovasi · Kerjasama",
+    "tit6": "Mereka adalah teras ACQUACAP dan kekuatan asas perniagaan kami. Mereka menentukan budaya kita dan semua yang kita lakukan berpandukan prinsip-prinsip ini.",
+    "tit7": "Tanggungjawab Sosial",
+    "tit8": "ACQUACAP berusaha memberi kesan positif semasa melayani pelabur kami.  Kami percaya adalah mustahak untuk melakukan kebaikan sambil melakukan yang baik. "
+  },
+  "overviewArr": [
+    {
+      "tit":"Melabur di Peringkat Global",
+      "cont":"TKelas di mana kami melabur termasuk ekuiti swasta, ekuiti pertumbuhan, hedge  funds, hutang, harta tanah dan aset alternatif lain."
+    },
+    {
+      "tit":"Penyelesaian yang Disesuaikan",
+      "cont":"Kami sentiasa melakukan inovasi ke dalam strategi dan penyelesaian baru untuk memberikan perkhidmatan yang lebih baik untuk pelabur kami."
+    },
+    {
+      "tit":"Prestasi Lebih Baik",
+      "cont":"Kami sentiasa mencari pulangan yang unggul di pelbagai kelas aset dan melalui   semua jenis keadaan ekonomi."
+    }
+  ],
+  "overviewArr2": [
+    {
+      "tit":"Memperkasakan Ratusan Perusahaan",
+      "cont":"Dengan bakat dan modal yang fleksibel, kami membantu syarikat untuk menyelesaikan banyak masalah. Sementara itu, kami juga menyediakan sumber yang memberi kuasa kepada usahawan untuk memberi kesan ekonomi yang berkekalan."
+    },
+    {
+      "tit":"Mengambil bahagian dalam kerja kemasyarakatan",
+      "cont":"Merawat komuniti di mana orang kita tinggal dan bekerja adalah komitmen jangka panjang yang serius. Oleh itu, kami terus menyumbang kepada masyarakat melalui projek dan perkongsian yang inovatif."
+    },
+    {
+      "tit":"Mengurangkan Kesan Alam Sekitar",
+      "cont":"Kita mempunyai tanggungjawab untuk meninggalkan planet yang lebih baik untuk generasi yang akan datang. Dalam operasi seharian, kami komited untuk pembangunan berterusan. Kami berusaha untuk mengurangkan pelepasan karbon dan mengurangkan penggunaan tenaga pejabat melalui pejabat tanpa kertas dan intervensi kecekapan tenaga."
+    }
+  ],
+  "contact": {
+    "tit": "Hubungi Kami",
+    "con1": "Kami sentiasa komited untuk mencipta nilai melalui berorientasikan pelanggan. Pasukan global kami sentiasa bersedia memberikan sokongan pelbagai bahasa berkualiti tinggi kepada para pelabur kami. Sekiranya anda mempunyai sebarang pertanyaan, jangan ragu-ragu untuk memberitahu kami."
+  },
+  "ins": "Dapatan Pilihan",
+  "overviewTit": "Tentang Kami",
+  "overviewTit2": "Hubungi Kami",
+  "banner":"BUAT NILAI TERBAIK"
+}

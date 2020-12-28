@@ -1,33 +1,65 @@
 <template>
   <div style="padding-bottom: 50px;">
-    <a-carousel :after-change="onChange">
-      <img src="../assets/about.jpg" w-1/>
-    </a-carousel>
+    <div class="img-head">
+      <h4>{{$t('ins')}}</h4>
+      <img src="../assets/ins.jpg" w-1/>
+    </div>
     <div class="cont" auto c-383838>
-      <h4 fz-28 h-b>{{$route.params.tit}}</h4>
-      <p fz-24 h-p>
-        After Pfizer's announcement that the vaccine was more than 90 percent effective, not only did the three major U.S. stock indexes respond spectacularly, but the reaction among individual stocks was fierce. Some stocks that rely on the economic cycle rose, while some technology stocks that have benefited from the epidemic took a hit. Even some argue that "U.S. stocks don't need tech stocks to set records".
+      <h4 fz-28 h-b>{{localData.title}}</h4>
+      <p fz-24 h-p v-html="localData.content">
+
       </p>
-      <p fz-24 h-p>
-        The Invesco QQQ Trust ETF, which tracks the Nasdaq 100, is dominated by technology stocks. The top 10 stocks include Apple, Microsoft, Amazon, Facebook, Alphabet, Tesla, Nvidia, Adobe and PayPal. In the third quarter, FANNG were widely reducing, although QQQ remained popular.
-      </p>
+
     </div>
   </div>
 </template>
 
 <script>
+import {mapGetters,mapActions} from 'vuex'
+
+
 export default {
 name: "FeaturedList",
   methods: {
+    ...mapActions(['setContent']),
     onChange(a, b, c) {
       console.log(a, b, c);
     },
+    async getCont(){
+      const news=await this.$api.list.getNews(this.$i18n.locale)
+      if(news.code==0){
+        this.localData=news.data[this.index]
+      }
+      let tit = this.localData.title
+          .replace(/\=/g, "%3D")
+          .replace(/\+/g, "=")
+          .replace(/[\s]/g, "-")
+          .replace(/\?/g, "")
+          .replace(/\#/g, "?")
+          .replace(/\&/g, "&");
+      this. $router.push({name:'featuredList',params:{
+
+          tit
+
+        }})
+    }
+  },
+  data(){
+    return{
+      localData:{}
+    }
+  },
+  computed:{
+    ...mapGetters(['content','index'])
+  },
+   created(){
+     this.getCont()
   },
   watch:{
-    '$route.params.tit'(val){
-      console.log(val)
-      this.tit=val
-    }
+  '$i18n.locale'(){
+    this.getCont()
+  }
+
   }
 }
 </script>

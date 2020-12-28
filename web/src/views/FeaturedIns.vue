@@ -1,9 +1,10 @@
 <template>
   <div style="margin-bottom: 50px;">
-
-    <a-carousel :after-change="onChange">
+    <div class="img-head">
+      <h4>{{$t('ins')}}</h4>
       <img src="../assets/ins.jpg" w-1/>
-    </a-carousel>
+    </div>
+
 
     <div class="feat" w1200 v-for="[label, value] in newsList" :key="label">
       <a-skeleton active v-if="loading"/>
@@ -16,29 +17,12 @@
         </dt>
         <dd fz-26 c-383838 flex>
           <h4 c-383838 bold>
-            <template v-if="value.title&&value.title.length>=50">
-              <a-tooltip placement="top">
-                <template slot="title">
-                  {{value.title}}
-                </template>
-                <div>{{value.title|readMore(50,'...')}}</div>
-              </a-tooltip>
-
-            </template>
-            <template v-else>
-              {{value.title}}
-            </template>
+            {{value.title}}
           </h4>
 
 
-          <template v-if="value.brief&&value.brief.length>=150">
-            <p v-html="value.brief|readMore(150,'...')">
-            </p>
-          </template>
-          <template v-else>
-            <p v-html="value.brief"></p>
-          </template>
-          <span bold fz-26 c-p @click="goList(value.title)"> <i>Read More</i></span>
+          <p v-html="value.brief"></p>
+          <span bold fz-26 c-p @click="goList(value.title,value.content,label)"> <i>{{$t('content.btn')}}</i></span>
         </dd>
       </dl>
     </div>
@@ -47,56 +31,37 @@
 </template>
 
 <script>
-import about1 from "@/assets/about1.jpg";
-import about2 from "@/assets/about2.jpg";
-import about3 from "@/assets/about3.jpg";
+import {mapActions} from 'vuex'
 
 export default {
   name: "FeaturedIns",
   data() {
     return{
-      arr:[
-        {
-          tit:'How to Deal with Presidential Transition?',
-          cont:'As the new administration prepares to take office, what should investors be prepared for the coming uncertain time?',
-          img:about1
-        },
-        {
-          tit:'Are Tech Stocks Being Dumped?',
-          cont:'Some technology stocks that have risen on the back of the epidemic took a hit after Pfizer announced the vaccine was more than 90 per cent effective.',
-          img:about2
-        },
-        {
-          tit:'Energy Market Under the Process of De-Carbonization',
-          cont:'Despite the coVID-19 outbreak in 2020, shareholder participation on climate change issues reached a new high, especially in Europe.',
-          img:about3
-        }
-      ],
-      newsList:[],
+      newsList:{},
       mapkey:[10,20,30],
       banner:[],
       loading:true
     }
   },
   async created(){
-    this.loading=true
-    const news=await this.$api.list.getNews()
-    if(news.code==0){
-      const result = new Map()
-      let i=0;
-      for(const key in news.data){
-        result.set(this.mapkey[i],news.data[key])
-        i++
-      }
-      this.newsList=result
+    console.log(this.$i18n.locale)
+    this.getList()
+    const data=await this.$api.list.getBanner()
+    if(data.code==0){
+      this.banner=data.data
       this.loading=false
+    }else {
+      this.$message.warning('加载失败');
     }
+
   },
   methods: {
+    ...mapActions(['setContent']),
     onChange(a, b, c) {
       console.log(a, b, c);
     },
-    goList(tit){
+
+    goList(tit,content,index){
       tit = tit
           .replace(/\=/g, "%3D")
           .replace(/\+/g, "=")
@@ -104,13 +69,37 @@ export default {
           .replace(/\?/g, "")
           .replace(/\#/g, "?")
           .replace(/\&/g, "&");
-     this. $router.push({name:'featuredList',params:{
+      this. $router.push({name:'featuredList',params:{
 
-         tit
+          tit
 
         }})
+      this.setContent({
+        index,
+        language:this.$i18n.locale
+      })
+    },
+    async getList(){
+      const news=await this.$api.list.getNews(this.$i18n.locale)
+      if(news.code==0){
+        const result = new Map()
+        let i=0;
+        for(const key in news.data){
+          result.set(this.mapkey[i],news.data[key])
+          i++
+        }
+        this.newsList=result
+        console.log(this.newsList)
+      }else {
+        this.$message.warning('加载失败');
+      }
     }
   },
+  watch:{
+    '$i18n.locale'(val){
+      this.getList()
+    }
+  }
 }
 </script>
 

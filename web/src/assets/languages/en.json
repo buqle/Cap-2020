@@ -1,0 +1,105 @@
+{
+  "nav":[
+    {
+      "title":"Featured Insights",
+      "path":"/featured-insights"
+    },
+    {
+      "title":"Press Release",
+      "path":"/press-release"
+    },
+    {
+      "title": "Careers",
+      "path":"/careers"
+    },
+    {
+      "title":"About",
+      "child":[
+        {
+          "title":"Overview",
+          "path": "/overview"
+        },{
+          "title":"Contact",
+          "path":"/contact"
+        }
+      ]
+    }
+  ],
+  "content": {
+    "title": "What We Do",
+    "cont": "ACQUACAP is a leading global investment business investing capital on behalf of large institutions and pension funds. We strive to create great value for our investors by carefully managing their capital. The classes in which we invest include private equity, hedge funds, real estate and other alternative assets. Our efforts have won the recognition of investors and, more importantly, have supported the development of hundreds of enterprises.",
+    "btn": "Read More"
+  },
+  "career": {
+    "tit1": "Join ACQUACAP",
+    "tit2": "Come to ACQUACAP,",
+    "tit3": "truly be your personal best with our best team.",
+    "btn1": "Apply",
+    "btn2": "Discover ACQUACAP"
+  },
+  "arr":[
+    {
+      "tit":"Change the Future of Our Children",
+      "cont":"We worked with child welfare agencies to design innovative solutions using our expertise in data analysis and marketing. At the same time, we enlisted innovators from other fields to work with us on ways to safely reduce the number of homeless children."
+    },
+    {
+      "tit":"Business Will Never Be the Same as Before",
+      "cont": "While uncertainty from the COVID-19 crisis continues to circulate around the world, one thing has become clear: business has forever changed. Is it too late to change? ACQUACAP recently discussed with the media the long-term impact of the COVID-19 on the company's operations."
+    }
+  ],
+  "press": "Press Release",
+  "join": {
+    "bantit": "Careers",
+    "tit1": "Every day, we are willing to embracing new challenges, dedicate to keep moving forward and never stop. We have financial elites with decades of experience and dynamic new generations. We believe that teamwork is a keyword of our success, and our focus on professionalism makes us even better.",
+    "tit2": "Join Us",
+    "tit3": "At ACQUACAP, our growth is driven by exceptional talented people. We focus on attracting high calibre talents and advocating independent thinking and integrity.",
+    "tit4": "We committed to offering learning and development opportunities to help advance our employees’ careers across a number of areas. And of course, we also offer comprehensive and competitive benefits to our employees.",
+    "tit5": " Just send an email with your CV and the position you wish to apply for. ACQUACAP is looking forward to your joining."
+  },
+  "overview": {
+    "tit1": " ACQUACAP is one of the world’s leading global investment business. We serve institutional investors around the world. We strive to create great value for our investors through our diversified solutions. Our efforts have supported the development of hundreds of enterprises and local economies.",
+    "tit2": "What We Do",
+    "tit3": "We invest various alternative asset classes on behalf of large institutions and pension funds. Our mission is to create great value for our investors by carefully managing their capital.",
+    "tit4": "Principles",
+    "tit5": "Excellence · Integrity · Meticulosity · Innovation · Collaboration",
+    "tit6": "They are the core of ACQUACAP and a fundamental strength of our business. They define our culture and everything we do is guided by these principles.",
+    "tit7": "ocial Responsibility",
+    "tit8": "ACQUACAP seek to make positive impact while serving our investors. We believe it is imperative to do good while doing well. "
+  },
+  "overviewArr": [
+    {
+      "tit":"Investing Globally",
+      "cont":"The classes in which we invest include private equity, growth equity, hedge funds, debt, real estate and other alternative assets."
+    },
+    {
+      "tit":"Tailored Solutions",
+      "cont":"We are constantly innovating into new strategies and solutions to provide better tailored services for our investors."
+    },
+    {
+      "tit":"Better Performance",
+      "cont":"We have always been seeking superior returns across an expanding range of asset classes and through all types of economic conditions."
+    }
+  ],
+  "overviewArr2": [
+    {
+      "tit":"Empowering Hundreds of Enterprises",
+      "cont":"With our excellent talent and flexible capital, we help companies solve numerous problems. In the meanwhile, we also provide resources that empower entrepreneurs to make a lasting economic impact."
+    },
+    {
+      "tit":"Participating in Community Work",
+      "cont":"Caring for the communities in which our people live and work is a long-term commitment that we take seriously. So we continue to contribute to the community through innovative projects and partnerships."
+    },
+    {
+      "tit":"Reducing Environmental Impact",
+      "cont":"We have a responsibility to leave a better planet for future generations. In our daily operations, we are committed to sustainable development. We strive to reduce carbon emissions and reduce office energy consumption through paperless offices and energy efficiency interventions."
+    }
+  ],
+  "contact": {
+    "tit": "Contact",
+    "con1": "We are committed to creating value through customer oriented. Our global team is always ready to provide our investors with the highest quality multilingual support. If you have any questions, please don’t hesitate to tell us."
+  },
+  "ins": "Featured Insights",
+  "overviewTit": "About",
+  "overviewTit2": "Contact",
+  "banner":"CREATE BEST VALUE"
+}

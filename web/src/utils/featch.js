@@ -43,6 +43,9 @@ export default {
         }else {
             return axios({
                 method:'get',
+                headers:{
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
                 url,
                 params,
                 //timeout:300000

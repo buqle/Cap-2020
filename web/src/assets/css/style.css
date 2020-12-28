@@ -58,7 +58,7 @@ button {
    font-size: 22px;margin-right: 50px;}
 .overlay span,.head-bar p span{border-bottom:6px solid transparent;}
 .head-bar p span:hover,.overlay span:hover,.head-bar p span.active{color: #ffb900;border-bottom: 6px solid #ffb900;}
-
+.overlay-warp p:hover{color: #ffb900;}
 .footer-new span,.head-bar p span{color: #383838;cursor: pointer;}
 
 
@@ -110,3 +110,35 @@ i{font-style: normal;}
 [h-p]{font-family: HelveticaLig;}
 [h-b]{font-family: HelveticaBold;}
 [c-f9b705]{color: #f9b705;}
+.about-warp{width: 1120px;padding-bottom: 90px;}
+.over-view{line-height: 40px;padding-top: 40px;}
+.over-view dl{padding-top: 60px;}
+.over-view dt{flex:0 0 434px;width: 434px;height: 264px;margin-right: 30px;}
+.over-view dd h4{font-size: 50px;}
+.over-view dd p{line-height: 50px;}
+.over-view dd .cont{flex: 1 1 0;align-items: flex-end;}
+.over-view2{padding-top: 46px;}
+.over-view2 h4{color: #f9b705;}
+.over-view2 p{line-height: 44px;}
+.over-view3{padding: 80px 0;}
+.over-view3 dl{justify-content: space-between;}
+.over-view3 dl dt{padding:50px 0;}
+.over-view3 dl dd p{
+    margin-right: 60px;line-height: 66px;
+}
+.over-view dl dd img{width: 522px;height: 282px;flex:0 0 584px;}
+.over-view4{}
+.over-view4 dt{margin-right: 40px;}
+.over-view4 dt h4{padding-bottom: 50px;line-height: 40px;}
+.over-view4 dt p{line-height: 50px;}
+.over-view4 dd{width: 430px;height: 274px;flex: 0 0 430px;}
+.img-head{position: relative;}
+.img-head h4{    position: absolute;
+    font-size: 52px;
+    display: flex;
+    justify-content: center;
+    width: 1060px;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 2px #584d4d;}

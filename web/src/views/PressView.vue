@@ -1,12 +1,13 @@
 <template>
   <div class="press">
-    <a-carousel>
+    <div class="img-head">
+      <h4>{{$t('press')}}</h4>
       <img src="../assets/press_release.jpg" w-1/>
-    </a-carousel>
+    </div>
 
-    <dl auto v-for="(item,index) in arr" :key="index" flex>
+    <dl auto v-for="(item,index) in $t('arr')" :key="index" flex :class="$t('className')">
       <dt>
-        <img :src="item.img" w-1 h-1>
+        <img :src="imgArr[index]" w-1 h-1>
       </dt>
       <dd fz-28 c-383838 flex-column flex>
         <h4 h-b>{{item.tit}}</h4>
@@ -27,18 +28,8 @@ export default {
 name: "PressView",
   data(){
     return{
-      arr:[
-        {
-          tit:'Change the Future of Our Children',
-          cont:'We worked with child welfare agencies to design innovative solutions using our expertise in data analysis and marketing. At the same time, we enlisted innovators from other fields to work with us on ways to safely reduce the number of homeless children.',
-          img:press1
-        },
-        {
-          tit:'Business Will Never Be the Same as Before',
-          cont:'While uncertainty from the COVID-19 crisis continues to circulate around the world, one thing has become clear: business has forever changed. Is it too late to change? ACQUACAP recently discussed with the media the long-term impact of the COVID-19 on the company\'s operations.',
-          img:press2
-        }
-      ]
+      imgArr:[press1,press2],
+
     }
   }
 }
@@ -51,6 +42,9 @@ name: "PressView",
   .press dd{margin-left: 36px;}
   .press dd h4{line-height: 24px;}
   .press dd p{font-size: 26px;line-height: 50px;}
+  .press .zh dd p{line-height: 70px;}
+  .press .other dd h4{font-size: 26px;}
+  .press .other dd p{font-size: 24px;}
   .press dd .cont{flex: 1 1 0;align-items: flex-end;}
   dl:nth-of-type(even){flex-direction: row-reverse;}
 </style>

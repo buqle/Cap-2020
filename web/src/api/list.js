@@ -13,9 +13,9 @@ const list={
             })
         });
     },
-    getNews(){
+    getNews(lang){
         return new Promise((resolve,reject)=>{
-            axios.get(`${route}/home/news`)
+            axios.get(`${route}/home/news?lang=${lang}`)
                 .then(res=>{
                     console.log(res);
                     resolve(res)
