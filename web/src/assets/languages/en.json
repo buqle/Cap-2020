@@ -5,8 +5,8 @@
       "path":"/featured-insights"
     },
     {
-      "title":"Press Release",
-      "path":"/press-release"
+      "title":"Product",
+      "path":"/product"
     },
     {
       "title": "Careers",
@@ -15,6 +15,10 @@
     {
       "title":"About",
       "child":[
+        {
+          "title":"Press Release",
+          "path":"/press-release"
+        },
         {
           "title":"Overview",
           "path": "/overview"
@@ -101,5 +105,30 @@
   "ins": "Featured Insights",
   "overviewTit": "About",
   "overviewTit2": "Contact",
-  "banner":"CREATE BEST VALUE"
+  "banner":"CREATE BEST VALUE",
+  "product1": "ACQUACAP ",
+  "product2": "Selection",
+  "proCont": {
+    "tit": "What Is ACQUACAP Selection?",
+    "cont": "ACQUACAP Selection is a collection of funds and portfolio products selected by ACQUACAP. These high-quality funds and portfolios are crafted by industry experts with more than 10 years of experience, and are co-incubated by leading global financial institutions in partnership with us.",
+    "cont2": "Each fund or portfolio caters to a different risk preferences and follows a strategy suited to your personal circumstances and goals. They can be modulated automatically according to your risk profile and return "
+  },
+  "proviewArr": [
+    {
+      "tit":"Easy & Flexible",
+      "cont":"You can easily <br>subscribe and trade the star funds incubated by us on the major fund "
+    },
+    {
+      "tit":"Professionally Craft",
+      "cont":"All portfolios and funds are carefully crafted by industry experts and jointly incubated by us."
+    },
+    {
+      "tit":"Low Cost",
+      "cont":"Take advantage of our low minimum fee so your money will go toward your investment, not a "
+    },
+    {
+      "tit":"Dedicated Support",
+      "cont":"You will have a  <br>exclusive wealth advisor collaborating to provide you with "
+    }
+  ]
 }

@@ -20,6 +20,12 @@ const routes = [
                 component: _import_('About'),
             },
             {
+                path: 'product',
+                name:'product',
+                component: _import_('Product'),
+
+            },
+            {
                 path: 'press-release',
                 name:'PressView',
                 component: _import_('PressView'),

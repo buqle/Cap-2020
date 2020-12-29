@@ -30,7 +30,7 @@
 
           </p>
 
-         <div class="lang" style="background: #fff;">
+<!--         <div class="lang" style="background: #fff;">
            <a-dropdown placement="bottomCenter">
              <span>{{language}}</span>
 
@@ -38,13 +38,13 @@
                <p v-for="(lang,indexs) in lang" @click="changeLang(lang)" :key="indexs" c-p>
                  {{lang.title}}
                </p>
-<!--               <button @click="ch">中文</button>
+&lt;!&ndash;               <button @click="ch">中文</button>
                <button @click="en">English</button>
-               <button @click="other">English</button>-->
+               <button @click="other">English</button>&ndash;&gt;
              </div>
 
            </a-dropdown>
-         </div>
+         </div>-->
 
        </div>
 

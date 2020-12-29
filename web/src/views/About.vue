@@ -2,7 +2,7 @@
   <div class="about">
     <a-carousel>
       <div class="img-head" w-1 v-for="(item,index) in banner" :key="index">
-        <h4>{{$t('banner')}}</h4>
+<!--        <h4>{{$t('banner')}}</h4>-->
         <img  :src="item"  w-1/>
       </div>
     </a-carousel>
