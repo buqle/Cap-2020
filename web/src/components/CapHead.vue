@@ -32,7 +32,10 @@
 
          <div class="lang" style="background: #fff;">
            <a-dropdown placement="bottomCenter">
-             <span>{{language}}</span>
+             <span flex align-center>
+               {{language}}
+               <svg t="1609223974778" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2535" width="16" height="16"><path d="M63.9 324.3l72.8-72.8L512 626.9l375.3-375.4 72.8 72.8L512 772.5z" fill="#333333" p-id="2536"></path></svg>
+             </span>
 
              <div slot="overlay" c-383838 class="overlay-warp">
                <p v-for="(lang,indexs) in lang" @click="changeLang(lang)" :key="indexs" c-p>
